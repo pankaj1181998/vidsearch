@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @vidlist.id %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @vidlist.tags %>
+</p>
+
+<%= link_to 'Edit', edit_vidlist_path(@vidlist) %> |
+<%= link_to 'Back', vidlists_path %>

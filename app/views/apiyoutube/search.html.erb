@@ -1,0 +1,29 @@
+<h1>Apiyoutube#search</h1>
+<p>Find me in app/views/apiyoutube/search.html.erb</p>
+<br>
+<h4>Check </h4>
+
+<div>
+<%= form_tag(apiyoutube_search_path, method: "post") do %>
+  
+  <%= label_tag(:chk_link, "Search Link") %><br>
+  <%= text_field_tag(:chk_link) %>
+  <%= submit_tag("Check") %>
+
+<% end %>
+</div>
+
+<div>
+<br>
+<h4>Add Tags and Save</h4>
+
+<%= form_for Vidlist.new  do |f| %>
+  <%= f.label :link_id %> <br>
+  <%= f.text_field :link_id %> <br>
+  <%= f.label :tags %> <br>
+  <%= f.text_field :tags %>
+
+ <%= f.submit "Submit" %>
+<% end %>
+
+</div>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vidlists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vidlists.each do |vidlist| %>
+      <tr>
+        <td><%= vidlist.id %></td>
+        <td><%= vidlist.tags %></td>
+        <td><%= link_to 'Show', vidlist %></td>
+        <td><%= link_to 'Edit', edit_vidlist_path(vidlist) %></td>
+        <td><%= link_to 'Destroy', vidlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vidlist', new_vidlist_path %>

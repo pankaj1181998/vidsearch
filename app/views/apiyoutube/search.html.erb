@@ -4,10 +4,11 @@
 <h4>Check </h4>
 
 <div>
-<%= form_tag(apiyoutube_search_path, method: "post") do %>
+<%= form_tag(apiyoutube_ldetails_path, method: "post") do %>
   
   <%= label_tag(:chk_link, "Search Link") %><br>
   <%= text_field_tag(:chk_link) %>
+  <br><br>
   <%= submit_tag("Check") %>
 
 <% end %>
@@ -15,6 +16,7 @@
 
 <div>
 <br>
+<hr>
 <h4>Add Tags and Save</h4>
 
 <%= form_for Vidlist.new  do |f| %>
@@ -22,7 +24,7 @@
   <%= f.text_field :link_id %> <br>
   <%= f.label :tags %> <br>
   <%= f.text_field :tags %>
-
+<br><br>
  <%= f.submit "Submit" %>
 <% end %>
 

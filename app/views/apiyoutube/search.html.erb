@@ -3,6 +3,7 @@
 <br>
 <h4>Check </h4>
 
+
 <div>
 <%= form_tag(apiyoutube_ldetails_path, method: "post") do %>
   
@@ -13,8 +14,11 @@
 
 <% end %>
 </div>
-
+<div id="response">
+<%= render partial: "result" %>	
+</div>
 <div>
+
 <br>
 <hr>
 <h4>Add Tags and Save</h4>

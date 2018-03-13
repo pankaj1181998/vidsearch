@@ -20,13 +20,17 @@ class ApiyoutubeController < ApplicationController
 		
 	 	p res
 	 	if !res["items"].empty?
+	 		
 		 	@title = res["items"][0]["snippet"]["title"]
 		 	@desc = res["items"][0]["snippet"]["description"]
 	 		@img = res["items"][0]["snippet"]["thumbnails"]["medium"]
+	 		render partial: 'app/views/apiyoutube/_result.html.erb'	
 	 	else
 		 	print "wrong id	"
-		 	
+		 	render plain: "CHECK LINK_ID"
 		end
+
+		
 	end	
 
 end

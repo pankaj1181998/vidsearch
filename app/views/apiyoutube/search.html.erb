@@ -5,7 +5,7 @@
 
 
 <div>
-<%= form_tag(apiyoutube_ldetails_path, method: "post") do %>
+<%= form_tag(apiyoutube_ldetails_path, method: "post" , remote: true) do %>
   
   <%= label_tag(:chk_link, "Search Link") %><br>
   <%= text_field_tag(:chk_link) %>
@@ -14,9 +14,8 @@
 
 <% end %>
 </div>
-<div id="response">
-<%= render partial: "result" %>	
-</div>
+
+
 <div>
 
 <br>

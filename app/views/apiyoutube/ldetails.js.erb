@@ -1,0 +1,14 @@
+alert("Post Created ");
+$(".clear").val('');
+
+$.ajax({
+  type:"GET",
+  url:apiyoutube_ldetails_path,
+  dataType:"json",
+  success:function(result){
+    alert(result);
+  }
+})
+
+
+$("#show_res").prepend('<%= j render @desc ,@title %> ');

@@ -5,7 +5,7 @@
 
 
 <div id = "link_form">
-	<%= form_tag(apiyoutube_ldetails_path, method: "post" , remote: true) do %>
+	<%= form_tag(apiyoutube_ldetails_path, method: "post" , remote: true ) do %>
 	  
 	  <%= label_tag(:chk_link, "Search Link")  %><br>
 	  <%= text_field_tag 'chk_link', nil, class: 'clear' %>
@@ -13,14 +13,9 @@
 	  <%= submit_tag("Check") %>
 
 	<% end %>
-</div id="show_res" class="box"> 
- 	<%= @desc %>
- 	<%= @title %>
 </div>
-	
+<hr>
 
-
-</div>
 
 <div class="save_form">
 	<br><hr>

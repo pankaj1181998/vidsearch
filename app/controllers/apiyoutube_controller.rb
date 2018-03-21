@@ -21,19 +21,12 @@ class ApiyoutubeController < ApplicationController
 		Net::HTTP.get(uri) # => String
 		@res = JSON.parse(Net::HTTP.get(uri))
 		
-	 	
+		respond_to do |format|
 
-		render json: @res
-	 	# @title = @res["items"][0]["snippet"]["title"]
-	 	# @desc = @res["items"][0]["snippet"]["description"]
- 		# @img = @res["items"][0]["snippet"]["thumbnails"]["medium"]
-			
-		# respond_to do |format|
-
-  #       format.html { } # index.html.erb
-  #       format.json { render json: @res  }
-  #       format.js
-	 #   		end
+        format.html { } # index.html.erb
+        format.json { render json: @res  }
+        format.js
+	   		end
 	  
 
 	end	

@@ -1,18 +1,1 @@
-	$.ajax({
-  type:"GET",
-  url:apiyoutube_ldetails_path,
-  dataType:"json",
-  success:function(result){
-    alert(result);
-  }
-})
-
-alert("Post Created ");
-
-$(".clear").val('');
-
-
-
-$('#show_res').html("<%= j (render partial: output) %>");
-
-$("#show_res").prepend('<%= j render @desc ,@title %> ');
+$("#show_res").html("<%=escape_javascript(render :partial=>"output")%>");

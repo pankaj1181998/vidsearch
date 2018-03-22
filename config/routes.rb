@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   resources :mydbs
-  resources :posts
-  resources :vidlists
+  get 'mydbs/homepage'
   get 'apiyoutube/authorize'
-  get 'index/homepage'
   post 'apiyoutube/ldetails'
   get 'apiyoutube/search' ,to: 'apiyoutube#search'
   post 'apiyoutube/search'

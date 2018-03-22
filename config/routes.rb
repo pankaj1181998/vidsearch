@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :mydbs
+  resources :posts
   resources :vidlists
   get 'apiyoutube/authorize'
   get 'index/homepage'

@@ -69,6 +69,6 @@ class VidlistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vidlist_params
-      params.require(:vidlist).permit(:id, :tags)
+      params.require(:vidlist).permit(:title, :link, :image)
     end
 end

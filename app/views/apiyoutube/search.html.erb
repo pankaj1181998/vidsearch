@@ -14,20 +14,8 @@
 
 	<% end %>
 </div>
-<hr>
+
 <div id="show_res" class="box"> 
+<hr>
  	</div>
 
-<div class="save_form">
-	<br><hr>
-	<h4>Add Tags and Save</h4>
-
-	<%= form_for Vidlist.new  do |f| %>
-		  <%= f.label :link_id %> <br>
-		  <%= f.text_field :link_id %> <br>
-		  <%= f.label :tags %> <br>
-		  <%= f.text_field :tags %>
-		<br><br>
-		 <%= f.submit "Submit" %>
-	<% end %>
-</div>

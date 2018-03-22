@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mydb.title %>
+</p>
+
+<p>
+  <strong>Vid link:</strong>
+  <%= @mydb.vid_link %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @mydb.image %>
+</p>
+
+<%= link_to 'Edit', edit_mydb_path(@mydb) %> |
+<%= link_to 'Back', mydbs_path %>

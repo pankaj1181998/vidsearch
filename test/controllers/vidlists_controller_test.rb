@@ -17,7 +17,7 @@ class VidlistsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create vidlist" do
     assert_difference('Vidlist.count') do
-      post vidlists_url, params: { vidlist: { id: @vidlist.id, tags: @vidlist.tags } }
+      post vidlists_url, params: { vidlist: { image: @vidlist.image, link: @vidlist.link, title: @vidlist.title } }
     end
 
     assert_redirected_to vidlist_url(Vidlist.last)
@@ -34,7 +34,7 @@ class VidlistsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vidlist" do
-    patch vidlist_url(@vidlist), params: { vidlist: { id: @vidlist.id, tags: @vidlist.tags } }
+    patch vidlist_url(@vidlist), params: { vidlist: { image: @vidlist.image, link: @vidlist.link, title: @vidlist.title } }
     assert_redirected_to vidlist_url(@vidlist)
   end
 

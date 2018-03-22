@@ -1,0 +1,32 @@
+<%= form_with(model: mydb, local: true) do |form| %>
+  <% if mydb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mydb.errors.count, "error") %> prohibited this mydb from being saved:</h2>
+
+      <ul>
+      <% mydb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :mydb_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vid_link %>
+    <%= form.text_field :vid_link, id: :mydb_vid_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :mydb_image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

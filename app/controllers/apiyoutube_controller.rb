@@ -21,6 +21,13 @@ class ApiyoutubeController < ApplicationController
 		Net::HTTP.get(uri) # => String
 		@res = JSON.parse(Net::HTTP.get(uri))
 		
+		!@res["items"].empty?
+			@user = Mydb.new
+			@user.title = @res["items"][0]["snippet"]["title"]
+			@user.image = @res["items"][0]["snippet"]["thumbnails"]["medium"]
+			@user.vid_link = "https://www.youtube.com/watch?v="+@link
+			@user.save
+		
 		respond_to do |format|
 
         format.html { } # index.html.erb

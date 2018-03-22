@@ -1,2 +1,0 @@
-class Vidlist < ApplicationRecord
-end

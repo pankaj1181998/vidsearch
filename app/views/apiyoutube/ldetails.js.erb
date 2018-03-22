@@ -1,1 +1,11 @@
+$(document).ready(function () {
+$("#link_form").validate({
+debug: true,
+rules: {
+"link_form[email]": {required: true, email: true, remote:"/users/check_email" },  //added this
+"user[password]": {required: true, minlength: 6},
+"user[password_confirmation]": {required: true, equalTo: "#user_password"}
+}
+});
+});
 $("#show_res").html("<%=escape_javascript(render :partial=>"output")%>");

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mydbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Vid link</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mydbs.each do |mydb| %>
+      <tr>
+        <td><%= mydb.title %></td>
+        <td><%= mydb.vid_link %></td>
+        <td><%= mydb.image %></td>
+        <td><%= link_to 'Show', mydb %></td>
+        <td><%= link_to 'Edit', edit_mydb_path(mydb) %></td>
+        <td><%= link_to 'Destroy', mydb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mydb', new_mydb_path %>

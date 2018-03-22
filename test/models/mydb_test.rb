@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class VidlistTest < ActiveSupport::TestCase
+class MydbTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

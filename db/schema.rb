@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180204063116) do
+ActiveRecord::Schema.define(version: 20180322184410) do
 
-  create_table "vidlists", force: :cascade do |t|
-    t.string "link_id"
-    t.string "tags"
+  create_table "mydbs", force: :cascade do |t|
+    t.string "title"
+    t.string "vid_link"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 
 end

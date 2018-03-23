@@ -1,18 +1,11 @@
 <h1>Index#homepage</h1>
 <p>Find me in app/views/index/homepage.html.erb</p>
 
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
- 
-  <% @mydbs.each do |mydbs| %>
-    <tr>
-      <td><%= mydbs.title %></td>
-      <td><%= mydbs.image %></td>
-          </tr>
-  <% end %>
-</table>
+ <div>
+ 	
+	<% Mydb.all.each do |mydb| %>
+	<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
+	<%= mydb.title %>
+	  <%= mydb.vid_link %>
+	<% end %>
+</div>

@@ -24,7 +24,7 @@ class ApiyoutubeController < ApplicationController
 		!@res["items"].empty?
 			@user = Mydb.new
 			@user.title = @res["items"][0]["snippet"]["title"]
-			@user.image = @res["items"][0]["snippet"]["thumbnails"]["medium"]
+			@user.image = @res["items"][0]["snippet"]["thumbnails"]["default"]["url"]
 			@user.vid_link = "https://www.youtube.com/watch?v="+@link
 			@user.save
 		

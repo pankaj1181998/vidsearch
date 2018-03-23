@@ -12,18 +12,28 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .homepage{
+      padding-left: 25px;
+    }
+ .chksave{
+      padding-left: 25px;
+    }
+  </style>
+
   </head>
+
   <body>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-     <%=link_to "HOME", controller: "index", action: "homepage" %> 
-    </div>
+   <b>
     <ul class="nav navbar-nav ">
-      <li><%=link_to "TAG", controller: "apiyoutube", action: "search" %></li>
-      <li><%=link_to "EDIT TAG", controller: "index", action: "homepage" %></li>
+      <li> <%=link_to "PlayList", controller: "index", action: "homepage" %> </li>
+      <li><%=link_to "Check And Add", controller: "apiyoutube", action: "search" %></li>
+      <li><%=link_to "Edit PlayList", controller: "index", action: "homepage" %></li>
       </ul>
+  </b>
   </div>
 </nav>
     <%= yield %>

@@ -1,11 +1,13 @@
-<h1>Index#homepage</h1>
-<p>Find me in app/views/index/homepage.html.erb</p>
-
- <div>
- 	
-	<% Mydb.all.each do |mydb| %>
-	<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
-	<%= mydb.title %>
-	  <%= mydb.vid_link %>
-	<% end %>
+<section class="homepage">
+	<h1>My Playlist</h1>
+	<p>Always keep improving your taste!!!</p>
+	<br><br>
+	 	
+		<% Mydb.all.each do |mydb| %>
+		<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
+		<b>	<%= mydb.title %> </b>
+		<%= link_to "Open Video", mydb.vid_link, :target => "_blank" %>
+		<% end %>
+	<br><br>
 </div>
+</section>

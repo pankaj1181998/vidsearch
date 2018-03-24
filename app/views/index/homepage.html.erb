@@ -10,15 +10,15 @@
 			} 
 		</script>
 
-		<% Mydb.all.each do |mydb| %>
+		<% Mydb.all.each do |my| %>
 		<div class="panel panel-success">
 			<div class="panel-heading">
 			<br><br>
 								
-				<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
-			<b>	<%= mydb.title %> 
-				<%= link_to "Open Video", mydb.vid_link,class: " btn btn-primary" ,:target => "_blank" %>
-				<%= link_to 'Destroy', mydb, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" ,  :onClick => "refreshPage()" %>
+				<%= image_tag(my.image, :alt => "Pic Unavailable") %>
+			<b>	<%= my.title %> 
+				<%= link_to "Open Video", my.vid_link,class: " btn btn-primary" ,:target => "_blank" %>
+				<%= link_to 'Destroy', my, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" ,  :onClick => "refreshPage()" %>
 			</b>	
 				
 			<br><br>

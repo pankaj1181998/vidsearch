@@ -7,6 +7,8 @@ end
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
+gem 'rails_12factor', group: :production
+
 gem 'autoprefixer-rails'
   
 gem 'sprockets-rails', :require => 'sprockets/railtie'

@@ -7,10 +7,18 @@ end
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
+gem 'autoprefixer-rails'
+  
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
+
+gem 'bootstrap-sass', '~> 3.3.7'
+
+
+gem 'sprockets', '~> 3.5', '>= 3.5.2'
 
 gem 'google-api-client', '>0.7'
 

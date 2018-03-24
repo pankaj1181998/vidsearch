@@ -1,13 +1,23 @@
-<section class="homepage">
-	<h1>My Playlist</h1>
-	<p>Always keep improving your taste!!!</p>
-	<br><br>
-	 	
+<section class="moveright" >
+		<div >
+			<br>
+			<h1>My Playlist</h1>
+			<p>Always keep improving your taste!!!</p>
+		</div>
 		<% Mydb.all.each do |mydb| %>
-		<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
-		<b>	<%= mydb.title %> </b>
-		<%= link_to "Open Video", mydb.vid_link, :target => "_blank" %>
-		<% end %>
-	<br><br>
-</div>
+		<div class="panel panel-success">
+			<div class="panel-heading">
+			<br><br>
+								
+				<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
+			<b>	<%= mydb.title %> 
+				<%= link_to "Open Video", mydb.vid_link, :target => "_blank" %>
+			</b>	
+				
+			<br><br>
+			</div>
+
+		</div>
+    	
+    <% end %>
 </section>

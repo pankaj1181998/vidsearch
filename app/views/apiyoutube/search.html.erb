@@ -1,23 +1,24 @@
 
-<section class="chksave">
+<section class="moveright">
+<br>
 <h2>Add,Save Youtube Videos</h1>
-	<p>Find me in app/views/apiyoutube/search.html.erb</p>
+
+	
 	<br>
-<h4>Check </h4>
-
-
 <div id = "link_form">
 	<%= form_tag(apiyoutube_ldetails_path, method: "post" , remote: true ) do %>
 	  
-	  <%= label_tag(:chk_link, "Search Link")  %><br>
+	  <%= label_tag(:chk_link, "Link Id")  %><br>
 	  <%= text_field_tag 'chk_link', nil, class: 'clear' %>
 	  <br><br>
-	  <%= submit_tag("Check") %>
+	  <%= submit_tag "Check & Save", class: "btn btn-success" %>
 
 	<% end %>
 </div>
-
+<br>
+<hr>
 	<div id="show_res" class="box"> 
-	<hr>
+	
+	
  	</div>
 </section>

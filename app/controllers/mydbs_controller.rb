@@ -56,7 +56,7 @@ class MydbsController < ApplicationController
   def destroy
     @mydb.destroy
     respond_to do |format|
-      format.html { redirect_to mydbs_url, notice: 'Mydb was successfully destroyed.' }
+      format.html { redirect_to controller: 'index', action: 'homepage', notice: 'Mydb was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

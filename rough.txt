@@ -86,3 +86,7 @@ uul3KOb0g0o
 <div class="panel-heading">
 <div id="moveright">
 </div>
+
+ <%= submit_tag("Check & Save " ,:class => ".btn-success") %>
+
+ { redirect_to mydbs_url, notice: 'Mydb was successfully destroyed.' }

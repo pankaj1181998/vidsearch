@@ -4,6 +4,12 @@
 			<h1>My Playlist</h1>
 			<p>Always keep improving your taste!!!</p>
 		</div>
+		<script>
+			function refreshPage(){
+			   setTimeout(window.location.reload(),5000);
+			} 
+		</script>
+
 		<% Mydb.all.each do |mydb| %>
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -11,7 +17,8 @@
 								
 				<%= image_tag(mydb.image, :alt => "Pic Unavailable") %>
 			<b>	<%= mydb.title %> 
-				<%= link_to "Open Video", mydb.vid_link, :target => "_blank" %>
+				<%= link_to "Open Video", mydb.vid_link,class: " btn btn-primary" ,:target => "_blank" %>
+				<%= link_to 'Destroy', mydb, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" ,  :onClick => "refreshPage()" %>
 			</b>	
 				
 			<br><br>
@@ -19,5 +26,7 @@
 
 		</div>
     	
+    	
+    
     <% end %>
 </section>

@@ -119,3 +119,4 @@ production:
   database: db/production.sqlite3
 
 <%= ENV['MYAPP_DATABASE_PASSWORD'] %> 
+<%= ENV['MYAPP_DATABASE_PASSWORD'] %>

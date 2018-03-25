@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180322184410) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "mydbs", force: :cascade do |t|
     t.string "title"
     t.string "vid_link"
@@ -19,6 +22,5 @@ ActiveRecord::Schema.define(version: 20180322184410) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 
 end
